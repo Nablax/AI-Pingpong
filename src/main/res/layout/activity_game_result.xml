@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.myapplication.GameResultActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_GameOver"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#f2b75e"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/Toolbal.TitleText">
+
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/btnBackToGame"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="288.5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_selector_mid"
+        android:text="返回           "
+        android:layout_below="@+id/relative_Page1"
+        android:layout_centerHorizontal="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_Page1"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:background="@drawable/main_backcolor"
+        android:layout_below="@+id/toolbar_GameOver"
+        android:layout_alignParentStart="true">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_GameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        android:text="游戏结果"
+        android:textColor="@color/color_eeeeee"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_jieguofenxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/color_eeeeee"
+        android:textSize="18sp"
+        android:text="游戏结果分析"
+        android:layout_below="@+id/toolbar_GameOver"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView_GameHitBall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_jieguofenxi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="击球数：0个"
+        android:textColor="@color/color_eeeeee" />
+
+    <TextView
+        android:id="@+id/textView_GameTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_GameHitBall"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="游戏时间：0s"
+        android:textColor="@color/color_eeeeee" />
+
+    <TextView
+        android:id="@+id/textView_GameAccuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_GameTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="准确率：100%"
+        android:textColor="@color/color_eeeeee" />
+
+</RelativeLayout>

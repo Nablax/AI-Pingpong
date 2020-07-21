@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.myapplication.FightActivityUpFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@+id/linearLayout_textHitball"
+        android:orientation="vertical"
+        android:background="@color/main_back_color_lightdark">
+
+        <TextView
+            android:id="@+id/blutooth_state"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="未连接蓝牙"
+            android:textColor="@color/color_eeeeee"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TabHost
+            android:id="@+id/tabhost_fight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.example.myapplication.OpenGLView
+                            android:id="@+id/model_3d"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/linechart_Fight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_textHitball"
+        style="@style/layout_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relative_Page1"
+        android:background="@color/main_back_color_lightdark"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/layout_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="击球类型"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView_hitType"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="----"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+
+            <TextView
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="击球力量"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView_force"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="0 N"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/layout_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_fanshoujiqiu"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="击球速度"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView_speed"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="0 m/s"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textView_pingjunqiusu"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="击球总数"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView_number"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_slip"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_back_color_lightdark">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="总体数据"
+            android:textColor="@color/color_eeeeee"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="13dp"
+            android:layout_toStartOf="@+id/textView9"
+            android:background="@color/color_eeeeee">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relativeLayout3"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/textView9"
+            android:background="@color/color_eeeeee" />
+
+        <LinearLayout
+            android:layout_width="10px"
+            android:layout_height="20px"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/textView9"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.myapplication.Main2Activity"
+    tools:showIn="@layout/app_bar_main2"
+    android:weightSum="1">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_main2"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:layout_above="@+id/relative_BelowBar" />
+
+    <RelativeLayout
+        android:id="@+id/relative_BelowBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_back_color_deepdark">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_on_nested"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/imageView_xunlian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/train" />
+
+            <ImageView
+                android:id="@+id/imageView_jiaoshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/classes" />
+
+            <Button
+                android:id="@+id/btnChooseMode"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/linear_Page1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="29dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector_deep" />
+
+            <ImageView
+                android:id="@+id/imageView_paihang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/rank" />
+
+            <ImageView
+                android:id="@+id/imageView_zhanghao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/identification" />
+
+        </LinearLayout>
+
+        <com.example.myapplication.ScrollerBar
+            android:id="@+id/scrollBar_main2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/LinearLayout_on_nested" />
+    </RelativeLayout>
+</RelativeLayout>

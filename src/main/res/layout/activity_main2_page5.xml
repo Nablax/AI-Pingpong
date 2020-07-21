@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_on_nested"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="@color/main_back_color_deepdark">
+
+        <RelativeLayout
+            android:id="@+id/relative_HaveWatchedTimes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView_HaveWatchedTimes"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="0"
+                android:textSize="30dp"
+                android:textColor="@color/color_eeeeee"
+                android:textAlignment="center"
+                android:paddingTop="20dp"/>
+
+            <TextView
+                android:id="@+id/textView_guankancishu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/color_eeeeee"
+                android:text="观看次数"
+                android:textAlignment="center"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_TrainingTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:id="@+id/textView_xunlianshichang"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:text="训练时长"
+                android:textColor="@color/color_eeeeee"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textView_TrainingTime"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="00:00:00"
+                android:textSize="30dp"
+                android:textColor="@color/color_eeeeee"
+                android:textAlignment="center"
+                android:paddingTop="20dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_TrainingTimes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView_xunlliancishu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:text="训练次数"
+                android:textColor="@color/color_eeeeee"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/textView_TrainingTimes"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="0"
+                android:textSize="30dp"
+                android:textColor="@color/color_eeeeee"
+                android:textAlignment="center"
+                android:paddingTop="20dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nestedScrollView"
+        android:layout_below="@+id/LinearLayout_on_nested"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/linear_Page5"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@color/main_back_color_lightdark"
+            android:minHeight="500dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative_ForeHandNormalHit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/inner_Relative_ForeHandNormalHit"
+                    android:layout_width="330dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/main_deep_yellow">
+
+                    <TextView
+                        android:id="@+id/textView_zhengshoujiqiushipin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="正手击球视频演示"
+                        android:textColor="@color/color_white"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_BackHandNormalHit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/inner_Relative_BackHandNormalHit"
+                    android:layout_width="330dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/main_deep_yellow">
+
+                    <TextView
+                        android:id="@+id/textView_fanshoujiqiushipin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="反手击球视频演示"
+                        android:textColor="@color/color_eeeeee"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_ForeHandLongHit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/inner_Relative_ForeHandLongHit"
+                    android:layout_width="330dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/main_deep_yellow">
+
+                    <TextView
+                        android:id="@+id/textView_zhengshoulaqiushipin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="正手拉球视频演示"
+                        android:textColor="@color/color_eeeeee"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_BackHandLongHit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/inner_Relative_BackHandLongHit"
+                    android:layout_width="330dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/main_deep_yellow">
+
+                    <TextView
+                        android:id="@+id/textView_fanshoulaqiushipin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="反手拉球视频演示"
+                        android:textColor="@color/color_eeeeee"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

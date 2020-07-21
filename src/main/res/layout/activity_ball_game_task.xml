@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.BallGameMainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout_BallGame"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_BallGame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f2b75e"
+            app:titleTextAppearance="@style/Toolbal.TitleText"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="游戏模式"
+                android:textColor="@color/color_eeeeee"
+                android:textSize="18sp"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_Page1"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@drawable/main_backcolor"
+        android:layout_below="@+id/appBarLayout_BallGame"
+        android:layout_alignParentStart="true">
+
+        <com.example.myapplication.CircularRingPercentageView
+            android:id="@+id/timer_BallGameTask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#D54C2A"
+            android:id="@+id/relativeLayout2" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_textPopball"
+        style="@style/layout_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relative_Page1"
+        android:background="#f06b4a"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/layout_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_rate"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="准确率:100%"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView_setting"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="游戏设置"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/layout_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textAlignment="textEnd"
+                android:text="音量" />
+
+            <SeekBar
+                android:id="@+id/seekBar_volume"
+                android:thumb="@drawable/seekbar_point_ballgame_task"
+                android:progressDrawable="@drawable/seekbar_ballgame_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_weight="3" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textAlignment="textEnd"
+                android:text="难度" />
+
+            <SeekBar
+                android:id="@+id/seekBar_difficulty"
+                android:thumb="@drawable/seekbar_point_ballgame_task"
+                android:progressDrawable="@drawable/seekbar_ballgame_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_weight="3" />
+
+            <Button
+                android:id="@+id/lock"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#F06B4A"
+        android:layout_below="@+id/linearLayout_textPopball"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout5">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="36dp"
+            android:background="#D54C2A">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="36dp"
+            android:background="#D54C2A"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnPopStartStop"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="288.5dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_selector_deep"
+        android:text="开始        "
+        android:layout_below="@+id/relativeLayout5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+
+</RelativeLayout>

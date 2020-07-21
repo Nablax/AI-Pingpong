@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEEEEE"
+    tools:context="com.example.myapplication.FightActivityDownFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_graphic"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@color/main_back_color_deepdark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/piechart_fight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_dataDetails"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_zhengfanshou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="正/反手"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView_ForeBackHand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0/0" />
+
+            <TextView
+                android:id="@+id/textView_pingjunqiusuxiaye"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="平均球速"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView_AvgBallSpeedDownPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0m/s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="#CCCCCC"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_zuoyouxuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="左/右旋"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView_LeftRightRoll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0/0" />
+
+            <TextView
+                android:id="@+id/textView_zuidaqiusuxiaye"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="最大球速"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView_MaxBallSpeedDownPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0m/s" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:background="#CCCCCC"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_luodishijianxiaye"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="落地次数"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView_DropTimeDownPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0次"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView_liliang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="力量"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textView_Power"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

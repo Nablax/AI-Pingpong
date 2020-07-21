@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.myapplication.DataStatisticsActivity"
+    android:weightSum="1">
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_back_color_deepdark"
+            app:titleTextAppearance="@style/Toolbal.TitleText"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="数据统计"
+                android:textColor="@color/color_eeeeee"
+                android:textSize="18sp"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="11.5dp"
+        android:paddingRight="11.5dp"
+        android:paddingLeft="11.5dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabHost
+                android:id="@+id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30px">
+
+
+                        <LinearLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ScrollView
+                                android:scrollbars="none"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="170dp"
+                                        android:background="@drawable/shape_corner"
+                                        android:paddingBottom="20px"
+                                        android:layout_marginBottom="10dp"
+                                        android:orientation="vertical">
+
+                                        <RelativeLayout
+                                            style="@style/layout_vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="10px"
+                                            android:paddingRight="10px"
+                                            android:paddingTop="10px">
+
+                                            <TextView
+                                                android:id="@+id/textView_chartTitle1"
+                                                style="@style/layout_horizontal"
+                                                android:layout_width="333dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.4"
+                                                android:text="▼ 1月25日"
+                                                android:textAlignment="center"
+                                                android:textColor="@color/color_f1a75a"
+                                                android:textSize="14sp" />
+
+                                            <RelativeLayout
+                                                android:layout_width="300dp"
+                                                android:layout_height="1dp"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_centerHorizontal="true"
+                                                android:background="#FF8C00" />
+
+                                        </RelativeLayout>
+
+                                        <com.github.mikephil.charting.charts.BarChart
+                                            android:id="@+id/barChart_contest"
+                                            style="@style/layout_vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="5">
+
+                                        </com.github.mikephil.charting.charts.BarChart>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/textView12"
+                                        style="@style/layout_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:text="击球类型统计"
+                                        android:gravity="center"
+                                        android:textSize="15sp"
+                                        android:textAlignment="center" />
+
+                                    <com.github.mikephil.charting.charts.PieChart
+                                        android:id="@+id/pieChart_contest"
+                                        style="@style/layout_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="350dp"
+                                        android:layout_marginBottom="5dp" />
+
+                                    <LinearLayout
+                                        style="@style/layout_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_weight="1.07"
+                                        android:background="@drawable/shape_corner"
+                                        android:layout_marginBottom="10dp"
+                                        android:padding="10dp"
+                                        android:orientation="vertical"
+                                        >
+
+                                        <TextView
+                                            android:id="@+id/textView16"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="1"
+                                            android:text="您的击球类型为xx"
+                                            android:textAlignment="center" />
+
+                                        <TextView
+                                            android:id="@+id/textView13"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="2"
+                                            android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="400dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/textView14"
+                                            style="@style/layout_vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:text="能力分析"
+                                            android:textAlignment="center" />
+
+                                        <com.github.mikephil.charting.charts.RadarChart
+                                            android:id="@+id/radarChart_contest"
+                                            style="@style/layout_vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_weight="5" />
+
+                                        <LinearLayout
+                                            style="@style/layout_vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="2"
+                                            android:layout_marginBottom="10dp"
+                                            android:padding="10dp"
+                                            android:background="@drawable/shape_corner"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textView15"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="1"
+                                                android:text="TextView"
+                                                android:textAlignment="center" />
+
+                                            <TextView
+                                                android:id="@+id/textView17"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="2"
+                                                android:text="TextView" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </ScrollView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ScrollView
+                                android:scrollbars="none"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="151dp"
+                                        android:background="@drawable/shape_corner"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0px"
+                                            android:layout_weight="1"
+                                            android:gravity="bottom"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/textView11"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="训练时间"
+                                                android:textAlignment="center" />
+
+                                            <TextView
+                                                android:id="@+id/textView10"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="消耗能量"
+                                                android:textAlignment="center" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0px"
+                                            android:layout_weight="0.62"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/textView_TrainingTime"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="0s"
+                                                android:textAlignment="center" />
+
+                                            <TextView
+                                                android:id="@+id/textView_energy"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="0 Cal"
+                                                android:textAlignment="center" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0px"
+                                            android:layout_weight="0.62"
+                                            android:gravity="bottom"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/textView25"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="平均击球"
+                                                android:textAlignment="center" />
+
+                                            <TextView
+                                                android:id="@+id/textView24"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="最大击球"
+                                                android:textAlignment="center" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0px"
+                                            android:layout_weight="1"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/textView_averhit"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="0 个/min"
+                                                android:textAlignment="center" />
+
+                                            <TextView
+                                                android:id="@+id/textView_maxhit"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="0个/min"
+                                                android:textAlignment="center" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/textView18"
+                                        style="@style/layout_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:text="击球类型统计"
+                                        android:gravity="center"
+                                        android:textSize="15sp"
+                                        android:textAlignment="center" />
+
+                                    <com.github.mikephil.charting.charts.PieChart
+                                        android:id="@+id/pieChart_daily"
+                                        style="@style/layout_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="350dp"
+                                        android:layout_marginBottom="5dp" />
+
+                                    <LinearLayout
+                                        style="@style/layout_vertical"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+                                        android:layout_weight="1.07"
+                                        android:background="@drawable/shape_corner"
+                                        android:layout_marginBottom="10dp"
+                                        android:padding="10dp"
+                                        android:orientation="vertical"
+                                        >
+
+                                        <TextView
+                                            android:id="@+id/textView19"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="1"
+                                            android:text="您的击球类型为xx"
+                                            android:textAlignment="center" />
+
+                                        <TextView
+                                            android:id="@+id/textView_luntan"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="2"
+                                            android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="400dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/textView21"
+                                            style="@style/layout_vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:text="能力分析"
+                                            android:textAlignment="center" />
+
+                                        <com.github.mikephil.charting.charts.RadarChart
+                                            android:id="@+id/radarChart_daily"
+                                            style="@style/layout_vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_weight="5" />
+
+                                        <LinearLayout
+                                            style="@style/layout_vertical"
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="2"
+                                            android:layout_marginBottom="10dp"
+                                            android:padding="10dp"
+                                            android:background="@drawable/shape_corner"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textView22"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="1"
+                                                android:text="TextView"
+                                                android:textAlignment="center" />
+
+                                            <TextView
+                                                android:id="@+id/textView23"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="2"
+                                                android:text="TextView" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </ScrollView>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

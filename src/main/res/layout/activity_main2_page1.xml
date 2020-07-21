@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relative_Page1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/main_back_color_lightdark">
+
+        <com.example.myapplication.CircularRingPercentageView
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/main_back_color_lightdark"
+        android:orientation="horizontal"
+        android:id="@+id/linear_Page1"
+        android:layout_below="@+id/relative_Page1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            style="@style/layout_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_pinjunsudu"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="最大速度"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textView_AvgSpeed"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:paddingTop="5dp"
+                android:text="0个/min"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_xunlianshijian"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingBottom="5dp"
+                android:text="训练时间"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textView_TrainingTime"
+                style="@style/layout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:paddingTop="5dp"
+                android:text="0s"
+                android:textAlignment="center"
+                android:textColor="#EEEEEE"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
